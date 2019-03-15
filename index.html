@@ -1,0 +1,49 @@
+<!-- <script language="javascript" type="text/javascript">
+    // 以下方式直接跳转
+    window.location.href='https://www.baidu.com/';
+</script> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>密盘App下载</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css\reset.css">
+    <link rel="stylesheet" href="css\layer.css">
+</head>
+
+<body>
+<button onclick="down()">点这里</button>
+
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/layer.min.js"></script>
+<script type="text/javascript">
+
+    function down(){
+        // var url = "https://download.mkpym.com/api/app/mipan"
+        var url = "https://cxl-services.appspot.com/proxy?url=https%3A%2F%2Ftranslation.googleapis.com%2Flanguage%2Ftranslate%2Fv2%2F%3Fq%3D%E4%BD%A0%E5%A5%BD%E5%95%8A%26source%3Dzh%26target%3Den"
+        var request = new XMLHttpRequest();
+        request.open("get", url);
+        request.send();
+
+       request.onreadystatechange = function () {
+       if (request.status==200) {
+    // 　　　　console.log(ajax.responseText);//输入相应的内容
+           // alert(request.responseText);
+           // echo(request.responseText);
+           // echo "Hello world!";
+            // document.getElementById("demo").innerHTML=request.responseText;
+            document.body.innerHTML=request.responseText;
+      　　}
+      }
+
+    }
+
+</script>
+</html>
